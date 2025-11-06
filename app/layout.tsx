@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Plasma from "@/components/Plasma";
 import Navbar from "@/components/Navbar";
+import SmoothScroll from "@/components/SmoothScroll";
 import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
@@ -31,7 +32,8 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
         >
-          <div className="w-full absolute top-0 left-0 -z-10 overflow-hidden">
+          <SmoothScroll />
+          <div className="w-full fixed top-0 left-0 -z-10 overflow-hidden">
             <Plasma scale={0.8} color="#8FABD4" mouseInteractive={false} />
           </div>
           <Navbar />
