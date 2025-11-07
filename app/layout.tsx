@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Plasma from "@/components/Plasma";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { ClerkProvider } from "@clerk/nextjs";
 
@@ -37,7 +38,8 @@ export default function RootLayout({
             <Plasma scale={0.8} color="#8FABD4" mouseInteractive={false} />
           </div>
           <Navbar />
-          <main>{children}</main>
+          <main className="min-h-[60vh]">{children}</main>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
