@@ -1,3 +1,4 @@
+import ContactInfo from "@/components/ContactInfo";
 import Hero from "@/components/Hero";
 import Insight from "@/components/Insight";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <section>
       <Hero />
       <Insight />
+      <ContactInfo />
     </section>
   );
 };
