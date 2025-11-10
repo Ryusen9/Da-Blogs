@@ -49,7 +49,7 @@ export default function ContactPage() {
   return (
     <div
       ref={rootRef}
-      className="max-w-4xl h-[75vh] flex flex-col items-center justify-center mx-auto px-6 lg:px-8 py-16"
+      className="max-w-4xl min-h-screen mt-8 md:mt-0 flex flex-col items-center justify-center mx-auto px-6 lg:px-8 py-16"
     >
       <header className="contact-hero text-center mb-10">
         <h1 className="text-4xl font-extrabold">Get in touch</h1>
