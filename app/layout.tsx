@@ -32,6 +32,7 @@ export default function RootLayout({
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+          cz-shortcut-listen="true"
         >
           <SmoothScroll />
           <div className="w-full fixed top-0 left-0 -z-10 overflow-hidden">

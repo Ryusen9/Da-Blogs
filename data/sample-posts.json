@@ -1,0 +1,62 @@
+[
+  {
+    "id": "post_001",
+    "title": "Speeding Up Next.js: Practical LCP Wins",
+    "slug": "speeding-up-nextjs-lcp-wins",
+    "date": "2025-10-20T10:00:00.000Z",
+    "tags": ["nextjs", "performance", "lcp"],
+    "excerpt": "Small, practical changes that cut Largest Contentful Paint times — from image loading to route caching.",
+    "readingTime": "6 min",
+    "coverImage": "/images/covers/lcp-wins.png",
+    "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
+    "draft": false
+  },
+  {
+    "id": "post_002",
+    "title": "Subtle Motion with GSAP: Micro-interactions that Delight",
+    "slug": "subtle-motion-gsap-micro-interactions",
+    "date": "2025-09-12T08:30:00.000Z",
+    "tags": ["gsap", "animation", "ux"],
+    "excerpt": "A short guide to tasteful micro-animations using GSAP — focus, timing, and reducing motion for accessibility.",
+    "readingTime": "5 min",
+    "coverImage": "/images/covers/gsap-micro.png",
+    "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
+    "draft": false
+  },
+  {
+    "id": "post_003",
+    "title": "Glassmorphism and Accessibility: A Practical Approach",
+    "slug": "glassmorphism-accessibility",
+    "date": "2025-07-02T14:15:00.000Z",
+    "tags": ["css", "design", "accessibility"],
+    "excerpt": "Glass-like UI effects are trendy — here’s how to use them without hurting contrast or readability.",
+    "readingTime": "7 min",
+    "coverImage": "/images/covers/glassmorphism.png",
+    "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
+    "draft": false
+  },
+  {
+    "id": "post_004",
+    "title": "TypeScript Generics: Real-world Patterns",
+    "slug": "typescript-generics-real-world",
+    "date": "2025-05-18T09:00:00.000Z",
+    "tags": ["typescript", "patterns", "dev"],
+    "excerpt": "Concrete examples of generics in libraries and apps — helpers, constraints, and ergonomics.",
+    "readingTime": "8 min",
+    "coverImage": "/images/covers/ts-generics.png",
+    "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
+    "draft": false
+  },
+  {
+    "id": "post_005",
+    "title": "Deploying a Fast Blog on Vercel — Checklist",
+    "slug": "deploying-fast-blog-vercel-checklist",
+    "date": "2025-03-10T11:20:00.000Z",
+    "tags": ["deployment", "vercel", "devops"],
+    "excerpt": "A checklist to keep builds fast, caching effective, and preview environments snappy when deploying to Vercel.",
+    "readingTime": "4 min",
+    "coverImage": "/images/covers/vercel-checklist.png",
+    "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
+    "draft": false
+  }
+]

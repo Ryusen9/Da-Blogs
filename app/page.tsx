@@ -1,4 +1,5 @@
 import ContactInfo from "@/components/ContactInfo";
+import ExploreBlogs from "@/components/ExploreBlogs";
 import Hero from "@/components/Hero";
 import Insight from "@/components/Insight";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <Insight />
       <ContactInfo />
+      <ExploreBlogs />
     </section>
   );
 };
