@@ -7,7 +7,7 @@
     "tags": ["nextjs", "performance", "lcp"],
     "excerpt": "Small, practical changes that cut Largest Contentful Paint times — from image loading to route caching.",
     "readingTime": "6 min",
-    "coverImage": "/image 1.jpeg",
+    "coverImage": "https://i.ibb.co.com/Kx4vq5mB/image-1.jpg",
     "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
     "draft": false
   },
@@ -19,7 +19,7 @@
     "tags": ["gsap", "animation", "ux"],
     "excerpt": "A short guide to tasteful micro-animations using GSAP — focus, timing, and reducing motion for accessibility.",
     "readingTime": "5 min",
-    "coverImage": "/image 2.jpeg",
+    "coverImage": "https://i.ibb.co.com/XrPg8nfn/image-2.jpg",
     "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
     "draft": false
   },
@@ -31,7 +31,7 @@
     "tags": ["css", "design", "accessibility"],
     "excerpt": "Glass-like UI effects are trendy — here’s how to use them without hurting contrast or readability.",
     "readingTime": "7 min",
-    "coverImage": "/image 3.jpeg",
+    "coverImage": "https://i.ibb.co.com/ds46YXzp/image-3.jpg",
     "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
     "draft": false
   },
@@ -43,7 +43,7 @@
     "tags": ["typescript", "patterns", "dev"],
     "excerpt": "Concrete examples of generics in libraries and apps — helpers, constraints, and ergonomics.",
     "readingTime": "8 min",
-    "coverImage": "/image 4.jpeg",
+    "coverImage": "https://i.ibb.co.com/8gSB83Zq/image-4.jpg",
     "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
     "draft": false
   },
@@ -55,7 +55,7 @@
     "tags": ["deployment", "vercel", "devops"],
     "excerpt": "A checklist to keep builds fast, caching effective, and preview environments snappy when deploying to Vercel.",
     "readingTime": "4 min",
-    "coverImage": "/image 5.jpeg",
+    "coverImage": "https://i.ibb.co.com/Sh67WDx/image-5.jpg",
     "author": { "name": "Da-Blogs", "twitter": "@da_blogs" },
     "draft": false
   }

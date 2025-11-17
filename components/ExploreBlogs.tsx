@@ -99,9 +99,11 @@ const ExploreBlogs = () => {
                   ))}
                 </div>
                 <div className="w-full flex items-center justify-end">
-                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition cursor-pointer">
-                    Read more
-                  </button>
+                  <Link href={`/blogs/${post.slug}`}>
+                    <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition cursor-pointer">
+                      Read more
+                    </button>
+                  </Link>
                 </div>
               </div>
             </MagicCard>
