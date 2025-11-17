@@ -1,77 +1,26 @@
 import Image from "next/image";
 import { Highlighter } from "./ui/highlighter";
 import { MagicCard } from "./ui/magic-card";
+import { Clock } from "lucide-react";
+import Link from "next/link";
+import posts from "@/data/sample-posts.json";
+
+interface Post {
+  id: string;
+  title: string;
+  slug: string;
+  date: string;
+  tags?: string[];
+  excerpt?: string;
+  readingTime?: string;
+  coverImage?: string;
+  author?: { name: string; twitter?: string };
+  draft?: boolean;
+}
 
 const ExploreBlogs = () => {
-  const data = [
-    {
-      id: "post_001",
-      title: "Speeding Up Next.js: Practical LCP Wins",
-      slug: "speeding-up-nextjs-lcp-wins",
-      date: "2025-10-20T10:00:00.000Z",
-      tags: ["nextjs", "performance", "lcp"],
-      excerpt:
-        "Small, practical changes that cut Largest Contentful Paint times — from image loading to route caching.",
-      readingTime: "6 min",
-      coverImage: "/image 1.jpeg",
-      author: { name: "Da-Blogs", twitter: "@da_blogs" },
-      draft: false,
-    },
-    {
-      id: "post_002",
-      title: "Subtle Motion with GSAP: Micro-interactions that Delight",
-      slug: "subtle-motion-gsap-micro-interactions",
-      date: "2025-09-12T08:30:00.000Z",
-      tags: ["gsap", "animation", "ux"],
-      excerpt:
-        "A short guide to tasteful micro-animations using GSAP — focus, timing, and reducing motion for accessibility.",
-      readingTime: "5 min",
-      coverImage: "/image 2.jpeg",
-      author: { name: "Da-Blogs", twitter: "@da_blogs" },
-      draft: false,
-    },
-    {
-      id: "post_003",
-      title: "Glassmorphism and Accessibility: A Practical Approach",
-      slug: "glassmorphism-accessibility",
-      date: "2025-07-02T14:15:00.000Z",
-      tags: ["css", "design", "accessibility"],
-      excerpt:
-        "Glass-like UI effects are trendy — here’s how to use them without hurting contrast or readability.",
-      readingTime: "7 min",
-      coverImage: "/image 3.jpeg",
-      author: { name: "Da-Blogs", twitter: "@da_blogs" },
-      draft: false,
-    },
-    {
-      id: "post_004",
-      title: "TypeScript Generics: Real-world Patterns",
-      slug: "typescript-generics-real-world",
-      date: "2025-05-18T09:00:00.000Z",
-      tags: ["typescript", "patterns", "dev"],
-      excerpt:
-        "Concrete examples of generics in libraries and apps — helpers, constraints, and ergonomics.",
-      readingTime: "8 min",
-      coverImage: "/image 4.jpeg",
-      author: { name: "Da-Blogs", twitter: "@da_blogs" },
-      draft: false,
-    },
-    {
-      id: "post_005",
-      title: "Deploying a Fast Blog on Vercel — Checklist",
-      slug: "deploying-fast-blog-vercel-checklist",
-      date: "2025-03-10T11:20:00.000Z",
-      tags: ["deployment", "vercel", "devops"],
-      excerpt:
-        "A checklist to keep builds fast, caching effective, and preview environments snappy when deploying to Vercel.",
-      readingTime: "4 min",
-      coverImage: "/image 5.jpeg",
-      author: { name: "Da-Blogs", twitter: "@da_blogs" },
-      draft: false,
-    },
-  ];
+  const data = posts;
 
-  console.log(data);
   return (
     <section>
       <div className="flex flex-col">
@@ -87,24 +36,80 @@ const ExploreBlogs = () => {
         </p>
       </div>
 
-      <div className="max-w-7xl border-2 mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data.map((post) => (
-          <div key={post.id}>
-            <MagicCard className="flex flex-col space-y-3">
-              <div>
-                <Image
-                  src={post.coverImage}
-                  alt={post.title}
-                  width={500}
-                  height={300}
-                  className="rounded-md"
-                />
+      <div className="max-w-7xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {data.map((post: Post) => (
+          <article
+            key={post.id}
+            className="rounded-lg overflow-hidden bg-transparent"
+          >
+            <MagicCard className="flex flex-col p-0.5">
+              <Link href={`/blogs/${post.slug}`} className="block">
+                <div className="relative h-56 w-full">
+                  <Image
+                    src={post.coverImage ?? "/Logo.png"}
+                    alt={post.title}
+                    fill
+                    className="object-cover rounded-t-lg"
+                    priority={false}
+                  />
+                </div>
+              </Link>
+              <div className="p-4 h-[250px] flex-1 flex flex-col justify-between">
+                <div>
+                  <Link
+                    href={`/blogs/${post.slug}`}
+                    className="hover:underline"
+                  >
+                    <h2 className="text-lg font-semibold leading-snug text-black">
+                      {post.title}
+                    </h2>
+                  </Link>
+                  <p className="text-sm text-gray-800 mt-2 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                </div>
+
+                <div className="mt-4 flex items-center justify-between text-xs text-gray-800">
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{post.readingTime}</span>
+                    </div>
+                    <span>•</span>
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString()}
+                    </time>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-gray-700">
+                      {post.author?.name}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {post.tags?.map((t: string) => (
+                    <span
+                      key={t}
+                      className="text-xs px-2 py-1 rounded bg-black/70 text-gray-200"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <div className="w-full flex items-center justify-end">
+                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition cursor-pointer">
+                    Read more
+                  </button>
+                </div>
               </div>
             </MagicCard>
-          </div>
+          </article>
         ))}
       </div>
     </section>
   );
 };
+
 export default ExploreBlogs;
